@@ -1,0 +1,158 @@
+
+### Compiler Options
+
+The g++ options -Wall -Weffc++ -Wextra -Wsign-conversion can be used enable the compiler to be more assertive about providing warnings
+
+The g++ option -pedantic-errors can be used to disable compiler extensions which may affect the portability of the code / output
+
+The g++ option  -Werror will force the compiler to treat all non-fatal warnings as fatal errors
+
+The g++ option -std can be used to select an appropriate C++ standard (e.g. for C++17, -std=c++17)
+
+
+### Program Basics
+
+A statement is a type of instruction that causes the program to perform some action.
+
+Statements are the most common type of instruction in c++ and are the smallest independent unit of computation in the c++ language
+
+Most (though not all) statements in c++ end in a semicolon; lines terminating in semicolons are likely to be statements
+
+Types of statements include: 
+    Declaration statements
+    Jump statements
+    Expression statements
+    Compound statements
+    Selection statements (conditionals)
+    Iteration statements (loops)
+    Try blocks
+
+Every c++ program must have a special function named main
+
+A single piece of data, stored in memory somewhere, is called a value
+
+Direct memory access in C++ is discouraged
+
+A variable is a named region of memory
+
+An object is a region of storage that has a value and other associated properties
+
+An object can be unamed or anonymous
+
+A named object is called a variable; the name of an object is called an identifier
+
+In order to create a variable, a special kind of declaration (called a definition) is used
+
+Variables are instantiated at runtime; this means that associated objects are created and assigned a memory address
+
+Variables must be instantiated before they can be used to store values
+
+An instantiated object is sometimes also called an instance
+
+In C++, the type of a variable must be known at compile time (when the program is compiled), and the type cannot be changed without recompiling the program
+
+It is possible (though discouraged) to define multiple variables of the same type in a single statement by separating the names with a comma (e.g. int a, b;)
+
+The process of giving a value to a variable is called copy assignment (or just assignment)
+
+A copy assignment (e.g. i = 5) is named such because it copies the value of the right hand side of the operator into the variable on the left hand side of the operator
+
+The = operator is called the assignment operator
+
+Defining a value for a variable at the point of instantiation is called initialisation and the value used to initialise a variable is called an initialiser
+
+There are four basic ways to initialise a variable in C++: 
+  - int a; (no initialiser)
+  - int b = 5 (initialised using assignment operator - "copy initialisation")
+  - int c(6) (parenthesis - "Direct initialisation")
+  - int d{7} (braces)
+
+The term "default initialisation" is used to describe the scenario in which a variable is instantiated with no initialiser
+
+A variable instantiated with "default initialisation" may be left with no determinate value
+
+"Copy initialisation" referers to the initialisation of a variable using the assignment operator
+
+Copy initialisation is not used much in modern C++ (why?)
+
+"Direct initialisation" refers to the initialisation of a variable using parentheses
+
+"Direct initialisation" was introduced to allow for more efficient initialisation of complex objects
+
+Direct initialisation is not use much in modern c++ (why?)
+
+Brace initialisation was introduced as a way to achieve consistent initialisation across different types
+
+It is best practice to favour initialisation using braces
+
+"Value initialisation" is when a variable is instanciated with an empty brace (e.g. int x{};) 
+
+In most cases, value initialisation will initialise a variable to zero (or empty, if that's more appropriate for the type)
+
+Explicit initialisation should be used for cases where the specified value will be used;
+Value initialisation should be used for cases where the value is temporary and will be replaced
+
+It is best practice to initialise variables upon creation
+
+Multiple variables can be instantiated in one line (e.g. int a, b;)
+It is also possible to initialise multiple variables in one line (e.g. int a{5}, b{6};)
+There is a danger with this approach that one of the values is default initialised
+(e.g. int a, b = 5; // It suggests that a and b are 5; a will default to 0!)
+Brace initialisation makes it a little more clear that only one of two values is being initialised
+(e.g. int a, b{5}; // suggests that only b is initialised with a non-default value)
+
+The [[maybe_unused]] attribute can be used to suppress warnings (potentially promoted to errors)
+resulting from variables which are initialised but not used
+
+
+Definition
+Instantiation
+Assignment
+Initialisation
+  - Default initialisation - e.g. int a;          May be set to indeterminate value
+  - Copy initialisation - e.g. int a = 6;         May not work with complex types; not best practice
+  - Direct initialisation - e.g. int a (6);       Works with complex types; not best practice
+  - Brace initialisation - e.g. int a {6};        Works with complex types; best practice
+  - Value initialisation - e.g. int a {};         Sets to default (e.g. 0) value
+
+The insertion operator (<<) can be used multiple times to concatenate outputs when using cout (e.g. std::cout << "Something" << " something else!";)
+
+When output using std::cout, std::endl prints a newline character to the console
+
+It is best practice to output a newline whenever a line of output is complete
+
+std::endl moves the cursor to the next line in the console and flushes the buffer of data waiting to be output
+
+The newline (\n) character is sometimes preferred to std::endl because it may be more efficient to enable the system to flush the buffer itself than to repeatedly flush it using std::endl
+
+It is best practice to prefer the newline character over std::endl when outputting to the text console
+
+Uninitialised variables may be given whatever existing value(s) were present in the memory address allocated for the variable before instantiation
+
+Use of un-initialised variables should be avoided for this reason as it will lead to undefined behaviour (UB)
+
+Undefined behaviour is a result of executing code whose behaviour is not well defined by the C++ language, and code may not compile/execute as expected as a result
+
+As of C++20, C++ reserves 92 words (called keywords) for its own use
+
+C++ also identifies special identifers 'override', 'final', 'import' and 'module'. These have specific meaning when used in context but are not reserved
+
+There are rules for naming of identifiers (e.g. variables, functions etc): 
+ - identifiers cannot be keywords
+ - identifiers can only use letters, numbers, and the underscore character
+ - identifiers must begin with a letter or an underscore (no numbers)
+ - c++ is case-sensitive
+
+It is convention in c++ that variable names should begin with a lowercase letter
+
+Identifier names that start with an uppercase letter are typically used for user-defined types (such as structs, classes and enumerations)
+
+Snake case (snake_case) and camel case (camelCase) are used in case of multi-word function or variable names
+
+A good rule of thumb is to make the length of an identifier proportional to how widely it is used
+
+
+
+
+
+
