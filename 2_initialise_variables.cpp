@@ -1,15 +1,15 @@
 # include <iostream>
 
 int main() {
-    int a; // no initialiser - "default initialisation"
-    int b = 5; // initialiser after equals sign - "copy initialisation"
-    int c( 6 ); // initialiser in parenthesis - "direct initialisation" - spaces for readability
-    int d{7}; // initialiser in braces - "brace", "uniform" or "list" initialisation
+    int a;                  // no initialiser - "default initialisation"
+    int b = 5;              // initialiser after equals sign - "copy initialisation"
+    int c( 6 );             // initialiser in parenthesis - "direct initialisation" - spaces for readability
+    int d{7};               // initialiser in braces - "brace", "uniform" or "list" initialisation
 
     // Three forms of brace initialisation: 
-    int width {5}; // "direct" brace initialisation (preferred)
-    int height = {6}; // "copy" brace initialisation 
-    int depth {}; // value initialisation
+    int width {5};          // "direct" brace initialisation (preferred)
+    int height = {6};       // "copy" brace initialisation 
+    int depth {};           // value initialisation
 
     // "Narrowing conversions" are no allowed using brace initialisation
 
@@ -24,7 +24,7 @@ int main() {
     // int z{4.5}; 
 
     // Value initialisation
-    int occurrences {}; // Should default to 0
+    int occurrences {};     // Should default to 0
     std::cout << occurrences << std::endl;
 
     // Default initialisation
