@@ -62,32 +62,11 @@ The = operator is called the assignment operator
 Defining a value for a variable at the point of instantiation is called initialisation and the value used to initialise a variable is called an initialiser
 
 There are four basic ways to initialise a variable in C++: 
-  - int a; (no initialiser)
-  - int b = 5 (initialised using assignment operator - "copy initialisation")
-  - int c(6) (parenthesis - "Direct initialisation")
-  - int d{7} (braces)
-
-The term "default initialisation" is used to describe the scenario in which a variable is instantiated with no initialiser
-
-A variable instantiated with "default initialisation" may be left with no determinate value
-
-"Copy initialisation" referers to the initialisation of a variable using the assignment operator
-
-Copy initialisation is not used much in modern C++ (why?)
-
-"Direct initialisation" refers to the initialisation of a variable using parentheses
-
-"Direct initialisation" was introduced to allow for more efficient initialisation of complex objects
-
-Direct initialisation is not use much in modern c++ (why?)
-
-Brace initialisation was introduced as a way to achieve consistent initialisation across different types
-
-It is best practice to favour initialisation using braces
-
-"Value initialisation" is when a variable is instanciated with an empty brace (e.g. int x{};) 
-
-In most cases, value initialisation will initialise a variable to zero (or empty, if that's more appropriate for the type)
+  - int a;      ("Default initialisation"   - no initialiser: no determinate value)
+  - int b = 5   ("Copy initialisation"      - initialised using assignment operator: uncommon)
+  - int c(6)    ("Direct initialisation"    - initialised using parenthesis: efficiency for complex objects; uncommon)
+  - int d{7}    ("Brace initialisation"     - initialised using curly braces: best practice)
+  - int d{}     ("Value initialisation"     - instanciated with an empty brace: initialise to zero/empty)
 
 Explicit initialisation should be used for cases where the specified value will be used;
 Value initialisation should be used for cases where the value is temporary and will be replaced
@@ -150,6 +129,14 @@ Identifier names that start with an uppercase letter are typically used for user
 Snake case (snake_case) and camel case (camelCase) are used in case of multi-word function or variable names
 
 A good rule of thumb is to make the length of an identifier proportional to how widely it is used
+
+An expression is a combination of literals, variables, operators and functions calls that calculates a single value
+
+Execution of an expression is called evaluation
+
+The single value produced by evaluation of an expression is called the result
+
+
 
 
 
