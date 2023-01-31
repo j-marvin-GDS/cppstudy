@@ -83,17 +83,6 @@ Brace initialisation makes it a little more clear that only one of two values is
 The [[maybe_unused]] attribute can be used to suppress warnings (potentially promoted to errors)
 resulting from variables which are initialised but not used
 
-
-Definition
-Instantiation
-Assignment
-Initialisation
-  - Default initialisation - e.g. int a;          May be set to indeterminate value
-  - Copy initialisation - e.g. int a = 6;         May not work with complex types; not best practice
-  - Direct initialisation - e.g. int a (6);       Works with complex types; not best practice
-  - Brace initialisation - e.g. int a {6};        Works with complex types; best practice
-  - Value initialisation - e.g. int a {};         Sets to default (e.g. 0) value
-
 The insertion operator (<<) can be used multiple times to concatenate outputs when using cout (e.g. std::cout << "Something" << " something else!";)
 
 When output using std::cout, std::endl prints a newline character to the console
@@ -135,6 +124,14 @@ An expression is a combination of literals, variables, operators and functions c
 Execution of an expression is called evaluation
 
 The single value produced by evaluation of an expression is called the result
+
+It is not permitted to explicitly call the "main" function in C++
+
+It is not permitted to define nested functions in C++
+
+The "main" function will implicitly return 0 if no return statement is provided; all other functions should have a return value explicitly defined
+
+It is not permitted to return a value from a void function
 
 
 
