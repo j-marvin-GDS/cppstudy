@@ -136,6 +136,18 @@ Execution of an expression is called evaluation
 
 The single value produced by evaluation of an expression is called the result
 
+The compiler compiles the contents of code files sequentially; functions should be declared and defined before they are used
+
+It is best practice when addressing compiler errors to resolve the first reported error and recompile the code
+
+Parameter names in function declarations are optional - though it is best practice to keep parameter names in the declarations
+
+Multiple identical declarations are permitted but are redundant
+
+The specification for a function used in a forward declaration must match:
+  - The specification for calls to that function (compiler); and
+  - The specification for the definition for the function (linker)
+
 
 
 
