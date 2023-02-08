@@ -4,6 +4,6 @@ int five() {
 
 int main() {
     [[maybe_unused]] int x { five() };      // Will generate an error if unused, unless [[maybe_unused]]
-    6 + 9;                                  // Will generate an error where expression result unused
+    6 + 9;                                  // Will generate an error where expression result unused (-Werror)
     return 0;
 }

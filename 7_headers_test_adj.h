@@ -1,0 +1,1 @@
+int outside_function(int x, int y);
