@@ -65,7 +65,7 @@ There are four basic ways to initialise a variable in C++:
   - int a;      ("Default initialisation"   - no initialiser: no determinate value)
   - int b = 5   ("Copy initialisation"      - initialised using assignment operator: uncommon)
   - int c(6)    ("Direct initialisation"    - initialised using parenthesis: efficiency for complex objects; uncommon)
-  - int d{7}    ("Brace initialisation"     - initialised using curly braces: best practice)
+  - int d{7}    ("Brace initialisation"     - initialised using curly braces: best practice. Sometimes called uniform initialisation)
   - int d{}     ("Value initialisation"     - instanciated with an empty brace: initialise to zero/empty)
 
 Explicit initialisation should be used for cases where the specified value will be used;
