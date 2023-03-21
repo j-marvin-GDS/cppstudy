@@ -35,8 +35,6 @@ int main() {
                 << my_input_val 
                 << "), and I can tell you - " 
                 << is_even_output << "\n";
-
-
-
+                
     return 0;
 }
