@@ -1,0 +1,1 @@
+ g++ -Wall -Weffc++ -Wextra -Wsign-conversion -pedantic -pedantic-errors -Werror -std=c++20 
