@@ -69,12 +69,6 @@ class Point:
 
 my_point = Point(123, 120)
 my_point.search()
-print("Coordinates: ", my_point.x, my_point.y)
-print("Inverted: ", my_point.inverse_x, my_point.inverse_y)
-print("Bitmap: ", my_point.bitmap_x, my_point.bitmap_y)
-print("Bitmap index: ", my_point.bitmap_index)
-print("Bitmap val: ", my_point.bitmap_val)
-print(bin(SEARCH_MAP))
 
 """
 SEARCH_MAP |= 1
