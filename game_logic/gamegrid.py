@@ -76,7 +76,10 @@ my_point = Point(11, 11)
 my_point.search()
 STR_SEARCH_MAP = str(bin(SEARCH_MAP)).strip()
 
-print(STR_SEARCH_MAP)
+for row in reversed(range(1, int(SM_LENGTH))):
+    start = -(row * int(SM_LENGTH))
+    end = start + int(SM_LENGTH)
+    print(STR_SEARCH_MAP[start:end if end else None])
 
 """
 00110000000000000000000000000000
