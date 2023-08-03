@@ -4,7 +4,7 @@
 #include <vector>
 #include <algorithm>
 
-constexpr double g_grid_width {128};
+constexpr double g_grid_width {4096};
 constexpr double g_sm_reduced_by {4};
 constexpr double g_sm_length {g_grid_width / g_sm_reduced_by};
 constexpr float g_sm_radius {3.5};
@@ -61,6 +61,8 @@ class Point {
             return points_in_rad;
         }
 
+        
+
 };
 
 void print_pir(std::vector<Point>& points) {
@@ -70,8 +72,8 @@ void print_pir(std::vector<Point>& points) {
 }
 
 int main() {
-    Point my_first_point {114, 97};
-    std::vector pir {my_first_point.points_in_rad()};
+    std::bitset<128*128> search_map {0};
+    std::cout << search_map.to_ulong() << "\n";
     return 0;
 }
 
